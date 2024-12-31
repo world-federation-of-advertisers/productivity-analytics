@@ -43,6 +43,8 @@ To understand how the data is collected, check out [Basic Walkthrough](./example
 - How many PR change requests are each contributor making?
 - How many back and forths with the PR author does it require to merge a PR?
 
+The same can be performed for any repo by changing the value for `repo_name`.
+
 ## Get Help
 
 If you need any help or have suggestions for improvements, you can do that [here](issues/new).
