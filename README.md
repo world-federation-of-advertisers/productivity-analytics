@@ -29,6 +29,16 @@ A suite of tools for productivity analytics.
 1) Download the package to your local machine
 2) Start an environment inside `productivity-analytics` directory
 
+To the root of the `productivity-analytics`, add a file `.env.dev` with the following contents: 
+
+```
+repo_owner=world-federation-of-advertisers
+repo_name=cross-media-measurement
+token=your_github_token
+```
+
+**NOTE:** The `repo_name` variable decides which repo data is fetched for. All the reports will be based on that data. You can also change the repo_name when executing the data building functions.
+
 ### Collect data
 
 To understand how the data is collected, check out [Basic Walkthrough](./examples/Basic-Walkthrough.ipynb). The data collection is currently per repo, so a separate dataset must be created for each repo following the examples given in the notebook.
@@ -43,7 +53,12 @@ To understand how the data is collected, check out [Basic Walkthrough](./example
 - How many PR change requests are each contributor making?
 - How many back and forths with the PR author does it require to merge a PR?
 
-The same can be performed for any repo by changing the value for `repo_name`.
+[Productivity Report](./examples/Productivity-Report.ipynb) answers the following questions for `cross-media-measurement` repo:
+
+- How many PRs are there for each Conventional Commit tags?
+- How many sustaining PRs vs. transformative PRs are there?
+- How many merged vs. not merged PRs are there by contributor?
+- How many PRs that never get merged are there by contributor?
 
 ## Get Help
 
