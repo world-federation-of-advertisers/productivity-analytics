@@ -31,11 +31,11 @@ A suite of tools for productivity analytics.
 
 ### Collect data
 
-To understand how the data is collected, check out [Basic Walkthrough](./exampes/Basic-Walkthrough.ipynb). The data collection is currently per repo, so a separate dataset must be created for each repo following the examples given in the notebook.
+To understand how the data is collected, check out [Basic Walkthrough](./examples/Basic-Walkthrough.ipynb). The data collection is currently per repo, so a separate dataset must be created for each repo following the examples given in the notebook.
 
 ### Analyze data
 
-[Velocity Report](./exampes/Velocity-Report.ipynb) answers the following questions for `cross-media-measurement` repo:
+[Velocity Report](./examples/Velocity-Report.ipynb) answers the following questions for `cross-media-measurement` repo:
 
 - How many days on average it takes to go from opening a PR to merging or closing it?
 - How many PRs are each contributor opening?
