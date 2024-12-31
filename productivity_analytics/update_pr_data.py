@@ -1,7 +1,7 @@
 import pandas as pd
 
-from productivity_analytics import get_pr_numbers
-from productivity_analytics import build_pr_dataframe
+from .get_pr_numbers import get_pr_numbers
+from .build_pr_dataframe import build_pr_dataframe
 
 
 def update_pr_data(repo_owner: str,
@@ -47,12 +47,14 @@ def update_pr_data(repo_owner: str,
     old_pr_numbers = pr_df['number'].tolist()
     pr_numbers = list(set(new_pr_numbers).difference(old_pr_numbers))
 
-    # Build the new data frame
-    new_pr_df = build_pr_dataframe(pr_numbers, repo_owner, repo_name, token)
+    if len(pr_numbers) > 0:
 
-    pr_df = pd.concat([new_pr_df, pr_df], ignore_index=True)
-
-    if save_to_file is True:
-        pr_df.to_csv(path_to_data, index=False)
+        # Build the new data frame
+        new_pr_df = build_pr_dataframe(pr_numbers, repo_owner, repo_name, token)
+    
+        pr_df = pd.concat([new_pr_df, pr_df], ignore_index=True)
+    
+        if save_to_file is True:
+            pr_df.to_csv(path_to_data, index=False)
 
     return pr_df

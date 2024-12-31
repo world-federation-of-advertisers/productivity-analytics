@@ -1,7 +1,7 @@
 import pandas as pd
 
-from productivity_analytics import get_pr_numbers
-from productivity_analytics import build_review_dataframe
+from .get_pr_numbers import get_pr_numbers
+from .build_review_dataframe import build_review_dataframe
 
 
 def update_review_data(repo_owner: str,
