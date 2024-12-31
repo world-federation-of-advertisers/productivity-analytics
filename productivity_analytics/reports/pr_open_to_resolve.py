@@ -2,7 +2,7 @@ import astetik
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from ..features import pr_days_to_close
+from ..appends import pr_days_to_close
 
 
 def pr_open_to_resolve(pr_df: pd.DataFrame,
