@@ -51,8 +51,8 @@ def pr_iterations_per_author(pr_df: pd.DataFrame,
                  x='count',
                  bins=30,
                  palette='Reds',
-                 x_label='Total Number of Back and Forths',
-                 y_label='Number of Observations',
+                 x_label='Number of Back and Forths',
+                 y_label='Number of Contributors',
                  title='How many back and forths with the PR author does it require to merge a PR?',
                  sub_title='[ Absolute Values ]')
 
