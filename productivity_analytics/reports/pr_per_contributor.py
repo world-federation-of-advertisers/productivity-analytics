@@ -33,8 +33,8 @@ def pr_per_contributor(pr_df: pd.DataFrame) -> pd.DataFrame:
                  x='count',
                  bins=len(pr_open_data),
                  palette='Reds',
-                 x_label='Total number of PRs',
-                 y_label='Number of Observations',
+                 x_label='Number of Opened PRs',
+                 y_label='Number of Contributors',
                  title='How Many PRs are Each Contributor Opening?',
                  sub_title='[ Absolute Values ]')
     

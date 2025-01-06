@@ -34,8 +34,8 @@ def pr_comment_per_contributor(review_df: pd.DataFrame) -> pd.DataFrame:
                  x='count',
                  bins=len(review_absolute_data),
                  palette='Reds',
-                 x_label='Total number of PR reviews',
-                 y_label='Number of Observations',
+                 x_label='Number of PR Reviews',
+                 y_label='Number of Contributors',
                  title='How many PR reviews or comments are each contributor making?',
                  sub_title='[ Absolute Values ]')
     

@@ -36,8 +36,8 @@ def pr_request_per_contributor(review_df: pd.DataFrame) -> pd.DataFrame:
                  x='count',
                  bins=len(abs_data),
                  palette='Reds',
-                 x_label='Total Number of PR Change Requests',
-                 y_label='Number of Observations',
+                 x_label='Number of PR Change Requests',
+                 y_label='Number of Contributors',
                  title='How Many PR Change Requests Are Each Contributor Making?',
                  sub_title='[ Absolute Values ]')
 
