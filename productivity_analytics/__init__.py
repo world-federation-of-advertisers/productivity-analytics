@@ -4,6 +4,7 @@ from .get_pr_numbers import get_pr_numbers
 from .get_review_data import get_review_data
 from .update_pr_data import update_pr_data
 from .update_review_data import update_review_data
+from .get_review_comment_data import get_review_comment_data
 
 # Transformation
 from .build_pr_dataframe import build_pr_dataframe
