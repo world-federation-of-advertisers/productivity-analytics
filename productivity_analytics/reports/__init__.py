@@ -7,3 +7,4 @@ from .sustaining_vs_transformative import sustaining_vs_transformative
 from .pr_per_tag import pr_per_tag
 from .merged_vs_not import merged_vs_not
 from .wasted_reviews import wasted_reviews
+from .lines_added_vs_deleted import lines_added_vs_deleted
