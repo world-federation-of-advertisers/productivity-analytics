@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def merged_vs_not(pr_df):
+def merged_vs_not(pr_df: pd.DataFrame) -> pd.DataFrame:
 
     '''
     Display the rate of PRs that were merged and not merged.
