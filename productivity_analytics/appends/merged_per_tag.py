@@ -1,6 +1,6 @@
 import pandas as pd
 
-def merged_per_tag(pr_df):
+def merged_per_tag(pr_df: pd.DataFrame) -> pd.DataFrame:
 
     # Convert timestamp into datetime
     pr_df['created_at'] = pd.to_datetime(pr_df['created_at'])
