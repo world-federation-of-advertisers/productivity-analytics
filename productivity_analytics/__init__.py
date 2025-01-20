@@ -23,4 +23,4 @@ from .reports import merged_vs_not
 from .reports import wasted_reviews
 from .reports import lines_added_vs_deleted
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
