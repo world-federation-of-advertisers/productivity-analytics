@@ -4,7 +4,8 @@ from .get_pr_numbers import get_pr_numbers
 from .build_review_dataframe import build_review_dataframe
 
 
-def update_review_data(repo_owner: str,
+def update_review_data(pr_df,
+                       repo_owner: str,
                        repo_name: str,
                        token: str,
                        path_to_data: str = '../data/review_data.csv',
@@ -15,6 +16,7 @@ def update_review_data(repo_owner: str,
     
     # Parameters
     
+    pr_df (DataFrame): Up-to-date DataFrame containing the pull request data.
     repo_owner (str): The organization or user that owns the repository.
     repo_name (str): Name of the repository.
     token (str): GitHub access token.
@@ -44,7 +46,6 @@ def update_review_data(repo_owner: str,
 
     # Load the current data
     review_df = pd.read_csv(path_to_data)
-    pr_df = pd.read_csv('../data/pr_data.csv')
 
     # Compare the PR numbers already in data with the new
     new_pr_numbers = get_pr_numbers(repo_owner, repo_name, token)
