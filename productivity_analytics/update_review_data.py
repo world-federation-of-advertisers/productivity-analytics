@@ -4,19 +4,17 @@ from .get_pr_numbers import get_pr_numbers
 from .build_review_dataframe import build_review_dataframe
 
 
-def update_review_data(pr_df,
-                       repo_owner: str,
+def update_review_data(repo_owner: str,
                        repo_name: str,
                        token: str,
                        path_to_data: str = '../data/review_data.csv',
                        save_to_file: bool = True) -> pd.DataFrame:
-    
+
     '''
     Update the saved review data for a repository.
-    
+
     # Parameters
-    
-    pr_df (DataFrame): Up-to-date DataFrame containing the pull request data.
+
     repo_owner (str): The organization or user that owns the repository.
     repo_name (str): Name of the repository.
     token (str): GitHub access token.
@@ -41,7 +39,7 @@ def update_review_data(pr_df,
 
     TODO: Test for corner cases to ensure to ensure that old reviews are
     updated correctly.
-    
+
     '''
 
     # Load the current data
@@ -49,9 +47,8 @@ def update_review_data(pr_df,
 
     # Compare the PR numbers already in data with the new
     new_pr_numbers = get_pr_numbers(repo_owner, repo_name, token)
-    open_pr_numbers = pr_df[pr_df['state'] == 'open']['number'].tolist()
-    pr_numbers = new_pr_numbers + open_pr_numbers
-    pr_numbers = set(review_df['number']).difference(set(pr_numbers)) 
+    old_pr_numbers = review_df['number'].tolist()
+    pr_numbers = list(set(new_pr_numbers).difference(old_pr_numbers))
 
     if len(pr_numbers) > 0:
 
