@@ -8,6 +8,7 @@ from .update_review_data import update_review_data
 # Transformation
 from .build_pr_dataframe import build_pr_dataframe
 from .build_review_dataframe import build_review_dataframe
+from .create_comment_timeline import create_comment_timeline
 from .appends import pr_days_to_close
 from .appends import merged_per_tag
 
@@ -23,4 +24,4 @@ from .reports import merged_vs_not
 from .reports import wasted_reviews
 from .reports import lines_added_vs_deleted
 
-__version__ = '0.2.0'
+__version__ = '0.2.1'
