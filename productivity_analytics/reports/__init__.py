@@ -4,7 +4,7 @@ from .pr_approvals_monthly_total import pr_approvals_monthly_total
 from .pr_comment_per_contributor import pr_comment_per_contributor
 from .pr_comments_monthly_total import pr_comments_monthly_total
 from .pr_created_monthly_total import pr_created_monthly_total
-from .pr_cycle_time_hours import pr_cycle_time_hours
+from .pr_cycle_time import pr_cycle_time
 from .pr_hours_to_first_review import pr_hours_to_first_review
 from .pr_iterations_per_author import pr_iterations_per_author
 from .pr_merged_monthly_total import pr_merged_monthly_total

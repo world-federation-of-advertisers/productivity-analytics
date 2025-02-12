@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def pr_merged_monthly_total(pr_df: pd.DataFrame,
-                            month) -> int:
+                            month: str) -> int:
 
     pr_df['merged_at'] = pd.to_datetime(pr_df['merged_at'])
 

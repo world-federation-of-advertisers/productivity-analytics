@@ -8,4 +8,4 @@ def pr_approvals_monthly_total(review_df: pd.DataFrame,
 
     data = review_df[review_df['state'] == 'APPROVED']
 
-    return data.groupby(review_df['created_at'].dt.to_period('M')).size()[month]
+    return data.groupby(data['created_at'].dt.to_period('M')).size()[month]
